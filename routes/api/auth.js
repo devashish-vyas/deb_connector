@@ -9,6 +9,8 @@ const bcrypt=require('bcryptjs');
  // @route Get api/auth
  // @(desc) Test Route
  //@access Public
+
+ //Using the token
 router.get('/',auth,async (req,res)=>{
     try{
         const user=await User.findById(req.user.id).select('-password');
@@ -20,7 +22,7 @@ router.get('/',auth,async (req,res)=>{
     }
 });
 
-
+//Generating the token
 router.post('/',
 
 [
