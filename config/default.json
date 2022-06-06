@@ -1,4 +1,7 @@
 {
     "mongoURI":"mongodb+srv://devashish:deva@cluster0.omleb.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret":"mysecrettoken"
+    "jwtSecret":"mysecrettoken",
+    "githubClientId" : "4e0ece6cf2e868de6604",
+    "githubSecret" : "a050bd0105fcaf2a9b9d92ab9140244720bd393a",
+    "githubToken":"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"
 }
