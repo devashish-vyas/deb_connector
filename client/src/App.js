@@ -7,6 +7,8 @@ import Register from "./components/auth/Register";
 import Alert from "./components/layout/Alert";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import Dashboard from "./components/dashboard/Dashboard";
+import PrivateRoute from "./components/routing/PrivateRoute";
 import "./App.css";
 //Redux
 import {Provider} from 'react-redux';
@@ -44,6 +46,14 @@ const App = () => {
             element={
               <section className="container">
                 <Login />
+              </section>
+            }
+          />
+           <Route
+            path="/dashboard"
+            element={
+              <section className="container">
+                <PrivateRoute component={Dashboard} />
               </section>
             }
           />
