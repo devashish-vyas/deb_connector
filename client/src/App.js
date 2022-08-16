@@ -8,6 +8,7 @@ import Alert from "./components/layout/Alert";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import Dashboard from "./components/dashboard/Dashboard";
+import CreateProfile from "./components/profile-forms/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import "./App.css";
 //Redux
@@ -54,6 +55,15 @@ const App = () => {
             element={
               <section className="container">
                 <PrivateRoute component={Dashboard} />
+              </section>
+            }
+          />
+
+          <Route
+            path="/create-profile"
+            element={
+              <section className="container">
+                <PrivateRoute component={CreateProfile} />
               </section>
             }
           />
