@@ -8,13 +8,15 @@ import Alert from "./components/layout/Alert";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import Dashboard from "./components/dashboard/Dashboard";
-import CreateProfile from "./components/profile-forms/CreateProfile";
+import CreateProfile from "./components/profile-forms/ProfileForm";
 import PrivateRoute from "./components/routing/PrivateRoute";
+import EditProfile from "./components/profile-forms/EditProfile";
 import "./App.css";
 //Redux
 import {Provider} from 'react-redux';
 
 import store from './store';
+import ProfileForm from "./components/profile-forms/ProfileForm";
 
 if(localStorage.token){
   setAuthToken(localStorage.token)
@@ -63,7 +65,16 @@ const App = () => {
             path="/create-profile"
             element={
               <section className="container">
-                <PrivateRoute component={CreateProfile} />
+                <PrivateRoute component={ProfileForm} />
+              </section>
+            }
+          />
+
+          <Route
+            path="/edit-profile"
+            element={
+              <section className="container">
+                <PrivateRoute component={ProfileForm} />
               </section>
             }
           />
