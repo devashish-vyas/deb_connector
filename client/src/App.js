@@ -14,6 +14,7 @@ import PrivateRoute from "./components/routing/PrivateRoute";
 import AddExperience from "./components/profile-forms/AddExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
 import Profiles from "./components/profiles/Profiles";
+import Profile from "./components/profile/Profile";
 
 import "./App.css";
 //Redux
@@ -61,6 +62,14 @@ const App = () => {
             element={
               <section className="container">
                 <Profiles />
+              </section>
+            }
+          />
+          <Route
+            path="/profile/:id"
+            element={
+              <section className="container">
+                <Profile />
               </section>
             }
           />
